@@ -98,7 +98,7 @@ AIRBNB_DATA_ENGINEERING_PROJECT/
 │   │   └── upload_to_s3.py
 │   ├── docker-compose.yml
 │   ├── plugins/
-│   └── logs/                ❌ (gitignore)
+│   └── logs/
 │
 ├── dbt_project/
 │   └── airbnb_dbt/
@@ -115,13 +115,13 @@ AIRBNB_DATA_ENGINEERING_PROJECT/
 │   │
 │   └── snowflake/
 │
-├── data/                    ⚠️ optional (small sample only)
+├── ingestion/
+│   └── upload_to_s3.py
+│
+├── data/
 │   ├── bookings.csv
 │   ├── hosts.csv
 │   └── listings.csv
-│
-├── ingestion/              ✅ keep (good separation)
-│   └── upload_to_s3.py
 │
 ├── requirements.txt
 ├── README.md
