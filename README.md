@@ -88,6 +88,48 @@ S3 → SQS → Airflow → Snowflake (RAW) → dbt (STAGING → INTERMEDIATE →
 
 ---
 
+## 📁 Project Structure
+
+AIRBNB_DATA_ENGINEERING_PROJECT/
+│
+├── airflow/
+│   ├── dags/
+│   │   ├── airbnb_pipeline.py
+│   │   └── upload_to_s3.py
+│   ├── docker-compose.yml
+│   ├── plugins/
+│   └── logs/                ❌ (gitignore)
+│
+├── dbt_project/
+│   └── airbnb_dbt/
+│       ├── models/
+│       ├── snapshots/
+│       ├── tests/
+│       ├── dbt_project.yml
+│
+├── terraform/
+│   ├── aws/
+│   │   ├── s3.tf
+│   │   ├── sqs.tf
+│   │   ├── iam.tf
+│   │
+│   └── snowflake/
+│
+├── data/                    ⚠️ optional (small sample only)
+│   ├── bookings.csv
+│   ├── hosts.csv
+│   └── listings.csv
+│
+├── ingestion/              ✅ keep (good separation)
+│   └── upload_to_s3.py
+│
+├── requirements.txt
+├── README.md
+├── .gitignore
+│
+└── docs/                   ⭐ (NEW - for screenshots)
+    └── airflow_dag.png
+
 ## ⚙️ Execution Steps
 
 ### 1. Provision Infrastructure
