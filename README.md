@@ -126,9 +126,6 @@ AIRBNB_DATA_ENGINEERING_PROJECT/
 ├── requirements.txt
 ├── README.md
 ├── .gitignore
-│
-└── docs/                   ⭐ (NEW - for screenshots)
-    └── airflow_dag.png
 
 ## ⚙️ Execution Steps
 
