@@ -90,6 +90,9 @@ S3 → SQS → Airflow → Snowflake (RAW) → dbt (STAGING → INTERMEDIATE →
 
 ## 📁 Project Structure
 
+## 📁 Project Structure
+
+```
 AIRBNB_DATA_ENGINEERING_PROJECT/
 │
 ├── airflow/
@@ -105,7 +108,7 @@ AIRBNB_DATA_ENGINEERING_PROJECT/
 │       ├── models/
 │       ├── snapshots/
 │       ├── tests/
-│       ├── dbt_project.yml
+│       └── dbt_project.yml
 │
 ├── terraform/
 │   ├── aws/
@@ -125,7 +128,8 @@ AIRBNB_DATA_ENGINEERING_PROJECT/
 │
 ├── requirements.txt
 ├── README.md
-├── .gitignore
+└── .gitignore
+```
 
 ## ⚙️ Execution Steps
 
