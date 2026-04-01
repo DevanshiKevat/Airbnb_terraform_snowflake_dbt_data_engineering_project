@@ -4,10 +4,15 @@ x-airflow-common: &airflow-common
   environment:
     AIRFLOW__CORE__EXECUTOR: LocalExecutor
     AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: "postgresql+psycopg2://airflow:airflow@postgres/airflow"
+
+    AIRFLOW__API__AUTH_BACKEND: airflow.api.auth.backend.basic_auth
+    AIRFLOW__WEBSERVER__AUTHENTICATE: "True"
+    AIRFLOW__WEBSERVER__AUTH_BACKEND: airflow.contrib.auth.backends.password_auth
     AIRFLOW__CORE__LOAD_EXAMPLES: "False"
     AIRFLOW__CORE__FERNET_KEY: ""
     AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: "False"
     _PIP_ADDITIONAL_REQUIREMENTS: "dbt-snowflake==1.5.0 apache-airflow-providers-amazon boto3 apache-airflow-providers-snowflake"
+    
   volumes:
     - ./dags:/opt/airflow/dags
     - ./logs:/opt/airflow/logs
