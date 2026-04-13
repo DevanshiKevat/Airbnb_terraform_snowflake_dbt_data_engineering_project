@@ -1,0 +1,13 @@
+airbnb_dbt:
+  outputs:
+    dev:
+      account: KFMMUTT-QAB84166
+      database: AIRBNB_DB
+      password: Omnamahshivay@9122
+      role: ACCOUNTADMIN
+      schema: TRANSFORM
+      threads: 1
+      type: snowflake
+      user: DevanshiKevat
+      warehouse: AIRBNB_WH
+  target: dev
