@@ -88,4 +88,8 @@ with DAG(
         trigger_rule="all_done",
     )
 
+
     refresh_stage >> files >> queries >> copy_into >> dbt_run >> dbt_test >> dbt_snapshot >> dbt_docs
+
+
+    # dbt docs serve --project-dir /opt/airflow/dbt/airbnb_dbt --port 8081
