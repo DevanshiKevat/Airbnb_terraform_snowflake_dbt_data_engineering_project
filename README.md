@@ -14,6 +14,12 @@ S3 → SQS → Lambda → Airflow → Snowflake (RAW) → dbt (STAGING → INTER
 
 ---
 
+## 📊 Architecture Diagram
+
+![Architecture](architecture.png)
+
+---
+
 ## 🛠️ Tech Stack
 
 | Layer            | Technology |
